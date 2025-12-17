@@ -8,7 +8,7 @@ const AddTodo = ({input,setInput,isEditable,setIsEditable,isId,setIsId}) => {
     
     const handleAdd=(e)=>{
       e.preventDefault()
-    
+     if(!input) return
       if(isEditable){
          dispatch(updateTodo({id:isId,text:input}))
          setInput('')
